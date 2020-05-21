@@ -1,0 +1,99 @@
+body {
+	margin: 30px;
+}
+
+.outer {
+	position: relative;
+	margin: 20px;
+	padding: 20px;
+	text-align: left;
+	border: solid 1px #959595;
+	background-color: #ffffff;
+	background-image: url('bgshade.png');
+	background-repeat: repeat-x;
+}
+
+#footer {
+	text-align: center;
+	font-size: 8pt;
+	color: #888888;
+}
+
+table.liste {
+	margin-left: 0px;
+	margin-right: 0px;
+	width: 100%;
+}
+
+table.liste tr {
+	width: 100%;
+}
+
+table.liste tr th {
+	background-color: #888888;
+	color: #ffffff;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+table.liste tr td {
+	cursor: pointer;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+table.liste tr.a td {background-color: #eeeeee;}
+table.liste tr.b td {background-color: #dddddd;}
+
+.eintrag,a.eintrag {
+	cursor: pointer;
+	text-decoration: none;
+	color: #111111;
+	font-weight: normal;
+}
+
+table.liste tr:hover td {
+	background-color: #ddddff;
+}
+
+table.liste tr td {
+	height: 18px;
+}
+
+th.prio {
+	text-align: center;
+}
+
+table.liste tr td.prio {
+	width: 14px;
+	text-align: center;
+}
+
+div.wrapbox {
+	margin: 0;
+	padding: 0;
+	left: 0;
+	right: 0;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+table.liste tr td.title {
+}
+
+table.liste tr td.lastmod {
+	width: 120px;
+}
+
+table.liste tr td.created {
+	width: 60px;
+}
+
+/**
+ * index
+ */
+.datum {
+	font-size: 8pt;
+	color: #888888;
+}
+/***/

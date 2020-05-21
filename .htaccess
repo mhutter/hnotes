@@ -1,0 +1,21 @@
+# Options All -Indexes
+
+# Use PHP5 as default
+# AddHandler application/x-httpd-php5 .php
+AddHandler application/x-httpd-php-source .phps
+
+# .htacces für notes.h-bomb.ch
+RewriteEngine on
+
+# Ausnahmen von den Rewrite Ruels
+RewriteRule ^robots\.txt$ robots.txt [S=99]
+RewriteRule ^favicon\.ico$ favicon.ico [S=99]
+RewriteRule ^_(.+) _$1 [S=99]
+
+# Die Modul-Magie
+RewriteCond %{HTTP_HOST} ^localhost$ [OR]
+RewriteCond %{HTTP_HOST} ^pc-eis-hum$ [OR]
+RewriteCond %{HTTP_HOST} ^h-bomb.dyndns.org$ [OR]
+RewriteCond %{HTTP_HOST} ^notes.h-bomb.ch$
+RewriteRule ^(.+)$ index.php?mod=%{REQUEST_URI}&%{QUERY_STRING}
+

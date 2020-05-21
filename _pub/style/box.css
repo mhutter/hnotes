@@ -1,0 +1,43 @@
+body {
+	margin: 0px;
+}
+
+div {
+	margin: 0;
+	padding: 0;
+}
+
+#outer{
+	height: 100%;
+	width: 100%;
+	display: table;
+}
+#container {
+	text-align: center;
+	position: relative;
+	display: table-cell;
+}
+#inner {
+	position: relative;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 20px;
+	padding-bottom: 40px;
+	border: solid 1px #959595;
+	background-color: #ffffff;
+	background-image: url('bgshade.png');
+	background-repeat: repeat-x;
+}
+
+#footer {
+	position: absolute;
+	left: 20px;
+	right: 20px;
+	bottom: 10px;
+	text-align: center;
+	font-size: 8pt;
+	color: #888888;
+}
