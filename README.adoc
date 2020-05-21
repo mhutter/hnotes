@@ -1,0 +1,10 @@
+= notes
+
+_For archival purposes only._
+
+This is a verbatim import of "notes", a tool I wrote back in 2007
+
+---
+> https://hutter.io/[Manuel Hutter] -
+> GitHub https://github.com/mhutter[@mhutter] -
+> Twitter https://twitter.com/dratir[@dratir]
