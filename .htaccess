@@ -13,9 +13,9 @@ RewriteRule ^favicon\.ico$ favicon.ico [S=99]
 RewriteRule ^_(.+) _$1 [S=99]
 
 # Die Modul-Magie
-RewriteCond %{HTTP_HOST} ^localhost$ [OR]
-RewriteCond %{HTTP_HOST} ^pc-eis-hum$ [OR]
-RewriteCond %{HTTP_HOST} ^h-bomb.dyndns.org$ [OR]
-RewriteCond %{HTTP_HOST} ^notes.h-bomb.ch$
+# RewriteCond %{HTTP_HOST} ^localhost$ [OR]
+# RewriteCond %{HTTP_HOST} ^pc-eis-hum$ [OR]
+# RewriteCond %{HTTP_HOST} ^h-bomb.dyndns.org$ [OR]
+# RewriteCond %{HTTP_HOST} ^notes.h-bomb.ch$
 RewriteRule ^(.+)$ index.php?mod=%{REQUEST_URI}&%{QUERY_STRING}
 

@@ -4,6 +4,19 @@ _For archival purposes only._
 
 This is a verbatim import of "notes", a tool I wrote back in 2007
 
+== Running the thing
+
+[source,bash]
+----
+docker compose up -d --build
+
+# wait for everything to come up
+# The mysql image is a bit borked so you may have to manually create the user
+# and the DB.
+
+docker compose exec -T db mysql hbombch_hutter --batch < schema.sql
+----
+
 ---
 > https://hutter.io/[Manuel Hutter] -
 > GitHub https://github.com/mhutter[@mhutter] -
