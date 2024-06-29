@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Sign up{% endblock %}
+
+{% block content %}
+<h1>Sign up</h1>
+
+<form class="signup-form" method="POST">
+  <div>
+    <label for="username">Username</label>
+    <input
+      type="text"
+      name="username" id="username"
+      tabindex="0" autofocus
+      required
+      {% if let Some(v) = username %}value="{{v}}" {% endif %}
+    />
+    {% if let Some(error) = errors.get("username") %}
+      <span class="form-error">{{error}}</span>
+    {% endif %}
+  </div>
+
+  <div>
+    <label for="password">Password</label>
+    <input 
+      type="password"
+      name="password" id="password"
+      required minlength="8"
+    />
+    {% if let Some(error) = errors.get("password") %}
+      <span class="form-error">{{error}}</span>
+    {% endif %}
+  </div>
+
+  <div>
+    <label for="password_confirmation">Password confirmation</label>
+    <input
+      type="password"
+      name="password_confirmation" id="password_confirmation"
+      required minlength="8"
+    />
+    {% if let Some(error) = errors.get("password_confirmation") %}
+      <span class="form-error">{{error}}</span>
+    {% endif %}
+  </div>
+
+  <input type="text" name="email" id="email" />
+
+  <div>
+    <button type="submit">Submit</button>
+  </div>
+{% endblock %}

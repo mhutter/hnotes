@@ -1,0 +1,20 @@
+services:
+  mongodb:
+    image: "docker.io/bitnami/mongodb:7.0"
+    volumes:
+      - "mongodb_data:/bitnami/mongodb"
+    environment:
+      MONGODB_REPLICA_SET_MODE: primary
+      MONGODB_REPLICA_SET_NAME: rs0
+      MONGODB_PORT_NUMBER: "27017"
+      MONGODB_INITIAL_PRIMARY_HOST: mongodb
+      MONGODB_INITIAL_PRIMARY_PORT_NUMBER: "27017"
+      MONGODB_ADVERTISED_HOSTNAME: localhost
+      ALLOW_EMPTY_PASSWORD: yes
+    env_file:
+      - ./.env
+    ports:
+      - "127.0.0.1:27017:27017/tcp"
+
+volumes:
+  mongodb_data: {}

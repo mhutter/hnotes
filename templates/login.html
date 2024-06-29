@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<h1>Login</h1>
+
+<form class="signup-form" method="POST">
+  {% if let Some(err) = error %}
+  <span class="form-error">{{err}}</span>
+  {% endif %}
+
+  <div>
+    <label for="username">Username</label>
+    <input
+      type="text"
+      name="username" id="username"
+      tabindex="0" autofocus
+      required
+      {% if let Some(v) = username %}value="{{v}}" {% endif %}
+    />
+  </div>
+
+  <div>
+    <label for="password">Password</label>
+    <input 
+      type="password"
+      name="password" id="password"
+      required
+    />
+  </div>
+
+  <div>
+    <button type="submit">Submit</button>
+  </div>
+{% endblock %}
